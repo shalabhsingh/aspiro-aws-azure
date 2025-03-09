@@ -23,13 +23,13 @@ def main():
             console.print("\n[bold green]Starting all resources...[/bold green]")
             aws_manager.start_ec2_instances()
             aws_manager.resume_apprunner_services()
-            azure_manager.start_vms()
+            azure_manager.start_container_apps()
 
         elif choice == "2":
             console.print("\n[bold yellow]Stopping all resources...[/bold yellow]")
             aws_manager.stop_ec2_instances()
             aws_manager.pause_apprunner_services()
-            azure_manager.stop_vms()
+            azure_manager.stop_container_apps()
 
         elif choice == "3":
             while True:
@@ -56,16 +56,16 @@ def main():
         elif choice == "4":
             while True:
                 console.print("\n[bold cyan]Azure Resource Management[/bold cyan]")
-                console.print("\n1. Start VMs")
-                console.print("2. Stop VMs")
+                console.print("\n1. Start Container Apps")
+                console.print("2. Stop Container Apps")
                 console.print("3. Back to main menu")
 
                 azure_choice = Prompt.ask("\nEnter your choice", choices=["1", "2", "3"])
 
                 if azure_choice == "1":
-                    azure_manager.start_vms()
+                    azure_manager.start_container_apps()
                 elif azure_choice == "2":
-                    azure_manager.stop_vms()
+                    azure_manager.stop_container_apps()
                 elif azure_choice == "3":
                     break
 

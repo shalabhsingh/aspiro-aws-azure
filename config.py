@@ -13,10 +13,10 @@ APPRUNNER_SERVICES = [
 ]
 
 # Azure Resources
-AZURE_SUBSCRIPTION_ID = ''  # Your Azure subscription ID
-AZURE_RESOURCE_GROUP = ''   # Your Azure resource group name
+AZURE_SUBSCRIPTION_ID = 'e9a62ea2-564f-4be3-b048-36bc4d880d7c'  # Your Azure subscription ID
+AZURE_RESOURCE_GROUP = 'DefaultResourceGroup-CID'   # Your Azure resource group name
 
-# List of Azure VM names to manage
-AZURE_VMS = [
-    # 'vm-name-1',  # Example VM name
-] 
+# List of Azure Container Apps to manage
+AZURE_CONTAINER_APPS = [
+    'vocode-app',  # Example Container App name
+]
